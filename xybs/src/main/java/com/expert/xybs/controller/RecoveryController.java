@@ -6,6 +6,7 @@ import com.expert.xybs.service.RecoveryService;
 import com.expert.xybs.pojo.Recovery;
 import com.expert.xybs.util.MyUtil;
 import com.expert.xybs.util.Return;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Transactional
 @CrossOrigin
+@Api(tags = "心里文章")
 public class RecoveryController {
     @Autowired
     private RecoveryService recoveryService;

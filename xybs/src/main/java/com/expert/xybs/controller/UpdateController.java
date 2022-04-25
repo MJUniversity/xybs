@@ -2,6 +2,7 @@ package com.expert.xybs.controller;
 
 import com.expert.xybs.service.UpdateService;
 import com.expert.xybs.util.Return;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 @Transactional
 @CrossOrigin
+@Api(tags = "上传")
 public class UpdateController {
     @Autowired
     private UpdateService updateService;

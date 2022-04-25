@@ -5,6 +5,7 @@ import com.expert.xybs.service.OperateService;
 import com.expert.xybs.pojo.Operate;
 import com.expert.xybs.util.MyUtil;
 import com.expert.xybs.util.Return;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import java.util.List;
 @RestController
 @Transactional
 @CrossOrigin
+@Api(tags = "运营管理")
 public class OperateController {
     @Autowired
     private OperateService operateService;

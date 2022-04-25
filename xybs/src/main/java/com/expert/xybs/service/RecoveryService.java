@@ -6,18 +6,18 @@ import com.alibaba.fastjson.JSONObject;
 import com.expert.xybs.mapper.BaseDaoMapper;
 import com.expert.xybs.mapper.RecoveryMapper;
 import com.expert.xybs.pojo.Recovery;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 
 @Service
 public class RecoveryService {
-    @Autowired
+    @Resource
     private BaseDaoMapper baseDaoMapper;
-    @Autowired
+    @Resource
     private RecoveryMapper recoveryMapper;
     public Integer add(JSONObject json) {
         String title = json.getString("title");

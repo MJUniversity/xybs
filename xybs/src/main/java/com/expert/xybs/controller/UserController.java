@@ -7,6 +7,7 @@ import com.expert.xybs.pojo.User;
 import com.expert.xybs.service.UserService;
 import com.expert.xybs.util.MyUtil;
 import com.expert.xybs.util.Return;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Transactional
 @CrossOrigin
+@Api(tags = "用户")
 public class UserController {
     @Autowired
     private UserService userService;

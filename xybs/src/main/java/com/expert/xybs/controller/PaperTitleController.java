@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.expert.xybs.service.PaperTitleService;
 import com.expert.xybs.util.MyUtil;
 import com.expert.xybs.util.Return;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Transactional
 @CrossOrigin
+@Api(tags = "测试")
 public class PaperTitleController {
     @Autowired
     private PaperTitleService paperTitleService;

@@ -5,6 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.expert.xybs.service.LabelsService;
 import com.expert.xybs.util.MyUtil;
 import com.expert.xybs.util.Return;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +15,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Transactional
 @CrossOrigin
+@Api(tags = "标签类型")
 public class LabelsController {
     @Autowired
     private LabelsService labelsService;
+    @ApiOperation("list")
     @PostMapping("/List")
     public Return List(@RequestBody JSONObject json){
         Return re = new Return();
