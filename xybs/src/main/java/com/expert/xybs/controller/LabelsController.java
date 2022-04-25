@@ -19,12 +19,12 @@ public class LabelsController {
     @PostMapping("/List")
     public Return List(@RequestBody JSONObject json){
         Return re = new Return();
-
         try {
             JSONArray list = labelsService.List(json);
             re.setData(list);
             re.setCode(200);
             re.setMsg("成功");
+            System.out.println("222");
         }catch  (Exception e) {
             e.printStackTrace();
             re.setCode(400);
